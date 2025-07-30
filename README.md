@@ -1,6 +1,39 @@
-# Signal Onset and End Detection
+# Signal Onset and End Detection in Noisy Data
 
-This project contains various algorithms to detect the start and end of signals buried in noise.
+This project implements and benchmarks various algorithms to detect the **start** and **end** of time-localized signals (boxcar, ramp up/down) that are **buried in noise**. The core idea is to use prior knowledge of signal shape or frequency content to detect its temporal boundaries reliably.
+
+---
+
+## 🔍 Example Output
+
+![Frequency Filter Envelope](results/figures/frequency_filtering_result.jpg)
+
+**Top plot:** Original signal (gray), clean version (black), ground truth vs detected boundaries  
+**Bottom plot:** Frequency-domain envelope used for detection with threshold and annotation
+
+---
+
+## 🎯 Key Features
+
+- 📦 **Boxcar**, **ramp-up**, and **ramp-down** signal models
+- 🧠 Envelope extraction via **frequency filtering and correlation**
+- 🎯 Start and end detection using a **crossing threshold**
+- 📊 Annotated plots for easy comparison of ground truth vs detected boundaries
+- 📁 Modular design: notebooks + reusable Python modules
+
+---
+
+## ⚙️ Signal Types
+
+| Type        | Description                             |
+|-------------|-----------------------------------------|
+| Boxcar      | Flat amplitude within a time window     |
+| Ramp-Up     | Linearly increasing envelope            |
+| Ramp-Down   | Linearly decreasing envelope            |
+
+Signals are modulated with a sine carrier and buried in additive Gaussian noise.
+
+---
 
 ## Structure
 
@@ -10,9 +43,11 @@ This project contains various algorithms to detect the start and end of signals 
 - `data/`: Synthetic/real signals
 - `results/`: Output plots and figures
 
-## Getting Started
+## 🚀 How to Use
+
+1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/signal-onset-end-detection.git
+git clone https://github.com/<your-username>/signal-onset-end-detection.git
 cd signal-onset-end-detection
-pip install -r requirements.txt
+ntains various algorithms to detect the start and end of signals buried in noise.
