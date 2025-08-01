@@ -50,4 +50,4 @@ Signals are modulated with a sine carrier and buried in additive Gaussian noise.
 ```bash
 git clone https://github.com/niththomas/signal-onset-end-detection.git
 cd signal-onset-end-detection
-conntains various algorithms to detect the start and end of signals buried in noise.
+contains various algorithms to detect the start and end of signals buried in noise.
